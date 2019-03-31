@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
   
-  EMAIL_FMT_VALID = (/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i).freeze
+  EMAIL_FMT_VALID = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
 
   validates :first_name, presence: true
   validates :last_name, presence: true
